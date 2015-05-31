@@ -1,3 +1,6 @@
-core_security_homepage:
+_core_security_homepage:
     path:     /
-    defaults: { _controller: CoreSecurityBundle:Default:index }
+    defaults: { _controller: FrameworkBundle:Redirect:redirect,route: core_security_homepage}
+core_security_homepage:
+    path:     /{_locale}/
+    defaults: { _controller: CoreSecurityBundle:Default:index, _locale: es }
