@@ -17,7 +17,15 @@
             <trans-unit id="4">
                 <source>Password</source>
                 <target>Contraseña</target>
-            </trans-unit>            
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Welcome</source>
+                <target>Bienvenido</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Home</source>
+                <target>Portada</target>
+            </trans-unit>           
         </body>
     </file>
 </xliff>

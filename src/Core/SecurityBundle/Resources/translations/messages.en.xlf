@@ -18,6 +18,14 @@
                 <source>Password</source>
                 <target>Password</target>
             </trans-unit>
+            <trans-unit id="5">
+                <source>Welcome</source>
+                <target>Welcome</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Home</source>
+                <target>Home</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

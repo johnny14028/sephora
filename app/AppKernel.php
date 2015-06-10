@@ -19,7 +19,9 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Theme\DefaultBundle\ThemeDefaultBundle(),
             new Core\SecurityBundle\CoreSecurityBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle()
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Core\PublicBundle\CorePublicBundle(),
+            new Core\CourseBundle\CoreCourseBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

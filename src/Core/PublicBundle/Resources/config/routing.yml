@@ -1,0 +1,9 @@
+core_public_homepage:
+    path:     /
+    defaults: { _controller: CorePublicBundle:Default:index }
+#_core_public_homepage:
+#    path:     /
+#    defaults: { _controller: FrameworkBundle:Redirect:redirect,route: core_public_homepage}
+#core_public_homepage:
+#    path:     /{_locale}/
+#    defaults: { _controller: CorePublicBundle:Default:index, _locale: es }    

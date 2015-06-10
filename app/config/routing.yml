@@ -1,3 +1,11 @@
+core_course:
+    resource: "@CoreCourseBundle/Resources/config/routing.yml"
+    prefix:   /
+
+core_public:
+    resource: "@CorePublicBundle/Resources/config/routing.yml"
+    prefix:   /
+
 core_security:
     resource: "@CoreSecurityBundle/Resources/config/routing.yml"
     prefix:   /

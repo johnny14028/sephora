@@ -17,11 +17,39 @@
 {% endblock %}
 {% block body %}
     <div class="container">
+            {{ form_start(form, {'action': path('core_security_check'), 'method': 'POST', 'attr': {'class': 'form-signin', 'role': 'form'}  }) }}
+                {% if error %}
+                    <span class="alert">{{ error.message }}</span>
+                {% endif %}
+                <div class="loginform">
+                     <div class="form-label">
+                        <label for="">Matrícula</label>
+                    </div>
+                     {{ form_errors(form._username) }}
 
+                     
+
+                     <div class="form-input">{{ form_widget(form._username, {'id': '_username', 'attr': {'placeholder': ' ','autofocus': 'autofocus'}, value: last_username }) }}</div>
+<div class="clearer"></div>
+                     <div class="form-label">
+                        <label for="">Contraseña</label>
+                    </div>
+                    
+                    {{ form_errors(form._password) }}
+                    
+                    <div class="form-input">{{ form_widget(form._password, {'id': '_password',  'attr': {'placeholder': ' '} }) }}</div>
+                    {{ form_widget(form.hdnUrlAjax, {'id': 'hdnUrlAjax', value: path('pucp_security_ajax') }) }}
+                    {{ form_widget(form.btnLogin, {'label': 'Entrar','id': 'btnLogin', 'attr': {'class': 'btn btn-lg btn-primary btn-block'} }) }}
+<div class="clearer"></div>
+                </div>
+                <div class="forgetpass"><a href="#">¿Olvidó su contraseña?</a></div>
+            {{ form_end(form) }}
+            
+            
         <form class="form-signin">
             <h2 class="form-signin-heading">{{'Please sign in'|trans}}</h2>
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="{{'Username'|trans}}" required autofocus>
+            <input type="text" id="inputEmail" class="form-control" placeholder="{{'Username'|trans}}" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="{{'Password'|trans}}" required>
             <div class="checkbox">
@@ -31,6 +59,7 @@
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">{{'Sign in'|trans}}</button>
         </form>
+        
 
     </div> <!-- /container -->
 {% endblock %}

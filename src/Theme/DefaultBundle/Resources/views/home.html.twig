@@ -1,0 +1,32 @@
+{# src/Cupon/OfertaBundle/Resources/views/home.html.twig #}
+{% extends "Theme"~theme|capitalize~"Bundle::frontend.html.twig" %}
+{% block title %}Sephora::{{'Home' | trans}}{% endblock %}
+{% block id 'home' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/themedefault/css/public.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+    {% block header %}
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item active" href="#">Home</a>
+                    <a class="blog-nav-item" href="#">New features</a>
+                    <a class="blog-nav-item" href="#">Press</a>
+                    <a class="blog-nav-item" href="#">New hires</a>
+                    <a class="blog-nav-item" href="#">About</a>
+                    <a class="blog-nav-item" href="#">Iniciar session</a>
+                </nav>
+            </div>
+        </div>
+    {% endblock %}
+{% block article %}{% endblock %}
+{% block aside %}{% endblock %}
+{% block footer %}
+    <footer class="blog-footer">
+        <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+{% endblock %}

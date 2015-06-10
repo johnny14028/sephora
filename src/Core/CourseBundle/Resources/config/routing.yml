@@ -1,0 +1,3 @@
+core_course_homepage:
+    path:     /{_locale}/course/
+    defaults: { _controller: CoreCourseBundle:Default:index }

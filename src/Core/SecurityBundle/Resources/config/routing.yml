@@ -1,6 +1,16 @@
-_core_security_homepage:
-    path:     /
-    defaults: { _controller: FrameworkBundle:Redirect:redirect,route: core_security_homepage}
-core_security_homepage:
-    path:     /{_locale}/
-    defaults: { _controller: CoreSecurityBundle:Default:index, _locale: es }
+#_core_security_homepage:
+#    path:     /security/
+#    defaults: { _controller: FrameworkBundle:Redirect:redirect,route: core_security_homepage}
+#core_security_homepage:
+#    path:     /{_locale}/
+#    defaults: { _controller: CoreSecurityBundle:Default:index, _locale: es }
+core_security_login:
+    path:     /login
+    defaults: { _controller: CoreSecurityBundle:Default:login }
+core_security_check:
+    pattern: /login_check
+core_security_logout:
+    pattern: /logout
+pucp_security_ajax:
+    pattern: /ajax/
+    defaults: {_controller: CoreSecurityBundle:Default:ajax}    
