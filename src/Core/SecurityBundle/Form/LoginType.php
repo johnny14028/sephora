@@ -22,17 +22,18 @@ class LoginType extends AbstractType {
     /**
      * @param OptionsResolverInterface $resolver
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver) {
-        $resolver->setDefaults(array(
-            'data_class' => 'Core\SecurityBundle\Entity\Config'
-        ));
-    }
+//    public function setDefaultOptions(OptionsResolverInterface $resolver) {
+//        $resolver->setDefaults(array(
+//            'data_class' => 'Core\SecurityBundle\Entity\Config'
+//        ));
+//    }
 
     /**
      * @return string
      */
     public function getName() {
-        return 'core_securitybundle_config';
+        return 'frmLogin';
+        //return 'core_securitybundle_config';
     }
 
 }
